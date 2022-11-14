@@ -1,0 +1,19 @@
+<section class="card">
+  <!-- The contents of the painting card links to the painting page using the painting ID -->
+  <a href="/post/{{id}}">
+    <!-- The card contains the painting name as the card header -->
+    <header>{{title}}</header>
+    <!-- In the body of the card, the painting is rendered along with the artist name -->
+
+    <div class="card-content">
+        <div class="content has-text-justified">
+            {{post_content}}
+        </div>
+            <div class="is-pulled-right">
+                <b>{{user.username}}</b>
+                 | {{format_date created_at}} | <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+            </div>
+    </div>
+  </a>
+</section>
+
